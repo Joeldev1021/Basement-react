@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  font-family: 'roboto', sans-serif; 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+   background:black;
+   color:white;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@font-face {
+  font-family: 'BasBasement';
+  src: url('../public/BasementGrotesque-Black_v1.202.otf');
+}

@@ -1,0 +1,18 @@
+.container-grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 440px));
+    grid-gap: 2rem;
+    margin: auto;
+    justify-content: center;
+}
+
+.grid-item {
+   background: linear-gradient(180deg, #1D1D1D 0%, rgba(21, 21, 21, 0) 100%);
+}
+
+.grid-item img{
+    width: 85%;
+    height: auto;
+    margin:auto;
+}

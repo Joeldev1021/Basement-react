@@ -1,0 +1,8 @@
+.modal-cart {
+    background:black;
+    border:1px solid white;
+    position: absolute;
+    width: 40rem;
+    top: 0;
+    right: 0;
+}

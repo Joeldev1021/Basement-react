@@ -1,0 +1,16 @@
+.cart-title {
+    font-size:5rem;
+    margin: auto;
+    font-family: 'BasBasement';
+    text-align: center;
+}
+
+.cart-title span {
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-color: 1px;
+    -webkit-text-stroke-width: 1px;
+    color:black;
+
+}
+
+

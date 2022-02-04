@@ -1,0 +1,13 @@
+.banner {
+    margin: auto;
+}
+
+.container-text {
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+   
+}
+.container-text p {
+    margin:0;
+    font-size: 4.3rem;
+}
