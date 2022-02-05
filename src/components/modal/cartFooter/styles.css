@@ -1,0 +1,35 @@
+.cart-footer {
+    display:grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+}
+
+.cart-footer p {
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin: 0;
+    border: 1px solid white;
+}
+
+.cart-footer button {
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 1.7rem;
+    color:white;
+    font-weight: bold;
+    border: 1px solid white;
+    font-family: 'BasBasement', sans-serif;
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-color: 1px;
+    -webkit-text-stroke-width: 1px;
+    color:black;
+
+
+}
+
+

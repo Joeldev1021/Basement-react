@@ -1,0 +1,47 @@
+.cart-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cart-info h2 {
+    font-size: 3rem;
+    margin: 0;
+    font-family: 'BasBasement';
+}
+
+.title-item {
+    font-size: 1.5rem;
+    margin: 0;
+    color:#999999;
+}
+/* quantity */
+.cart-count {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* cart size details */
+.cart-details {
+    display: flex;
+    height: 4rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-details ul {
+    list-style: none;
+    display: flex;
+    margin-left: 0.5rem;
+}
+
+.cart-details-size {
+    display: flex;
+    align-items: center;
+}
+
+.cart-price, .cart-details-size p {
+    font-size: 1.5rem;
+}
+

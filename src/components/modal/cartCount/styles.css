@@ -1,0 +1,26 @@
+.cart-action, .cart-action div {
+    display: flex;
+    align-items: center;
+}
+
+.cart-action p {
+    font-size:1.5rem;
+}
+
+.cart-action div {
+   border: 1px solid white;
+   border-radius: 2rem;
+   height: 2.5rem;
+   width: 8rem;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   margin-left: 1rem;
+}
+
+.cart-action button {
+    background:none;
+    color:white;
+    outline:none;
+    border: none;
+}

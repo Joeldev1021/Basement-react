@@ -2,7 +2,42 @@
     background:black;
     border:1px solid white;
     position: absolute;
-    width: 40rem;
+    width: 55rem;
+    height: 40rem;
     top: 0;
     right: 0;
+}
+
+.modal-btn {
+    position: absolute;
+    background:none;
+    right: 10px;
+    color:white;
+    outline: none;
+    border:none;
+    top: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-family: 'BasBasement';
+}
+
+.cart-content {
+    border: 1px solid white;
+    width: 90%;
+    margin: auto;
+    height: 19rem;
+    display: flex;
+}
+
+.cart-img {
+    width:18rem;
+    margin:1rem;
+    text-align: center;
+    background: linear-gradient(180deg, #1D1D1D 0%, rgba(21, 21, 21, 0) 100%);
+}
+
+.cart-img img {
+    width: 15rem;
 }
