@@ -1,26 +1,20 @@
+import CartFooter from "./cartFooter/CartFooter";
 import CartInfo from "./CartInfo/CartInfo";
 import CartLogo from "./CartLogo/CartLogo";
 import "./styles.css";
 
-const ModalCart = () => {
+const ModalCart = ({ handleModal }) => {
   return (
     <div className="modal-cart">
-      <span>close</span>
+      <button className="modal-btn" onClick={() => handleModal()}>close</button>
       <CartLogo />
-      <div className="container-item">
-        <img src="" alt="" />
-        <CartInfo />
-        <div>
-          <p>Size</p>
-          <ul>
-            <li>S</li>
-            <li>M</li>
-            <li>L</li>
-            <li>XL</li>
-          </ul>
+      <div className="cart-content">
+        <div className="cart-img">
+          <img src="./shirt.png" alt="" />
         </div>
-        <p>$12,50</p>
+        <CartInfo />
       </div>
+      <CartFooter/>
     </div>
   );
 };
