@@ -1,6 +1,10 @@
+@font-face {
+  font-family: 'BasBasement';
+  src: url('../public/BasementGrotesque-Black_v1.202.otf');
+}
 body {
   margin: 0;
-  font-family: 'roboto', sans-serif; 
+  font-family: 'BasBasement', sans-serif; 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
    background:black;
@@ -16,7 +20,7 @@ html {
   font-size: 62.5%;
 }
 
-@font-face {
-  font-family: 'BasBasement';
-  src: url('../public/BasementGrotesque-Black_v1.202.otf');
+p {
+  padding: 0;
 }
+
