@@ -1,17 +1,18 @@
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
 import "./styles.css";
 const Articles = () => {
+  const { item } = useContext(CartContext);
   return (
       <div className="container-grid">
-        <div className="grid-item">
-            <img src="./shirt.png" alt="" />
-        </div>
-        <div className="grid-item">
-            <img src="./hoodie.png" alt="" />
-        </div>
-        <div className="grid-item">
-            <img src="./cap.png" alt="" />
-        </div>
-      </div>
+        {item?.map(item => {
+          return (
+              <div className="grid-item" key={item.id}>
+                <img src={item.img} alt={item.name} />
+              </div>
+          );
+        })}
+    </div>
   );
 };
 
