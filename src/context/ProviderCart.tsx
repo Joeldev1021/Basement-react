@@ -1,13 +1,21 @@
-import { createContext } from "react";
+/* eslint-disable no-unused-vars */
+import { Children, useState } from "react";
+import { CartItem } from "../type";
+import { CartContext } from "./CartContext";
+import { data } from "../data";
 
-const cartContext = createContext(null);
+interface Props{
+  children :JSX.Element|JSX.Element[]
+}
 
-const ProviderCart = () => {
-
+const ProviderCart = ({ children }:Props) => {
+  const [item, setItem] = useState<CartItem[]>(data);
 
   return (
-
-  ) 
+    <CartContext.Provider value={{ item }}>
+      { children }
+    </CartContext.Provider>
+  );
 };
 
 export default ProviderCart;
