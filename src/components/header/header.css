@@ -5,8 +5,26 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
+    height: 6rem;
+}
+.logo-desktop {
+    display: block;
 }
 
-.header-title {
-    text-transform: lowercase;
+.logo-mobile {
+    display: none;
+}
+
+
+
+@media screen and (max-width: 650px) {
+    .logo-desktop {
+        display: none;
+    }
+    .logo-mobile {
+        display: block;
+    }
+    .hd-4k {
+        display: none;
+    }
 }

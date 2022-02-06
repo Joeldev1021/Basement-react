@@ -3,14 +3,22 @@
     border:1px solid white;
     position: absolute;
     width: 55rem;
-    height: 40rem;
+    min-height: 40rem;
+    padding-bottom: 10rem;
     top: 0;
     right: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .modal-cart {
+        width: 100%;
+    }
 }
 
 .modal-btn {
     position: absolute;
     background:none;
+    width: 9rem;
     right: 10px;
     color:white;
     outline: none;
@@ -23,11 +31,15 @@
     font-family: 'BasBasement';
 }
 
+.modal-btn img {
+    width:100%;
+}
+
 .cart-content {
     border: 1px solid white;
     width: 90%;
     margin: auto;
-    height: 19rem;
+    min-height: 19rem;
     display: flex;
 }
 
@@ -40,4 +52,9 @@
 
 .cart-img img {
     width: 15rem;
+}
+
+.cart-empty {
+    text-align: center;
+    font-size: 1.5rem;
 }

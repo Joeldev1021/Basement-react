@@ -1,13 +1,23 @@
 .banner {
     margin: auto;
+    width: 100%;
+}
+.banner img {
+    width: 100%;
 }
 
-.container-text {
+.banner-text {
     border-top: 2px solid white;
     border-bottom: 2px solid white;
    
 }
-.container-text p {
+.banner-text p {
     margin:0;
     font-size: 4.3rem;
+}
+
+@media screen and (max-width: 500px) {
+    .banner-text p {
+        font-size: 2rem;
+    }
 }

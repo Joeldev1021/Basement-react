@@ -1,18 +1,33 @@
 .container-grid {
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 440px));
+    grid-template-columns: repeat(auto-fill, minmax(340px, 440px));
     grid-gap: 2rem;
     margin: auto;
     justify-content: center;
 }
 
 .grid-item {
-   background: linear-gradient(180deg, #1D1D1D 0%, rgba(21, 21, 21, 0) 100%);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: linear-gradient(180deg, #1D1D1D 0%, rgba(21, 21, 21, 0) 100%);
 }
 
 .grid-item img{
     width: 85%;
     height: auto;
     margin:auto;
+}
+
+.item-info {
+    padding: 0 1rem;
+    
+    display: flex;
+    justify-content: space-between;
+    
+}
+.item-info {
+   font-size: 1.5rem;
+   border-top: 2px solid white;
 }

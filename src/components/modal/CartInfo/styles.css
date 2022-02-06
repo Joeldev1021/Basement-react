@@ -9,7 +9,7 @@
     font-family: 'BasBasement';
 }
 
-.title-item {
+.subtitle-item {
     font-size: 1.5rem;
     margin: 0;
     color:#999999;
@@ -43,5 +43,20 @@
 
 .cart-price, .cart-details-size p {
     font-size: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+    .cart-info h2 {
+        font-size: 1.4rem;
+    }
+    .subtitle-item {
+        font-size: 1.1rem;
+    }    
+    .cart-details-size p {
+        font-size: 1.1rem;
+    }
+    .cart-price {
+        font-size: 1.1rem;
+    }
 }
 
