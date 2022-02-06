@@ -1,11 +1,14 @@
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
 import "./styles.css";
 type BtnCartProps = {
   handleModal: () => void;
 }
 const BtnCart = ({ handleModal }:BtnCartProps) => {
+  const { itemCart } = useContext(CartContext);
   return (
         <button onClick={() => handleModal()} className="btn-cart">
-          Cart (0)
+          Cart ({itemCart.length})
         </button>
   );
 };
