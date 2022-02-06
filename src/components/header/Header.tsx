@@ -12,7 +12,9 @@ const Header = () => {
 
   return (
       <header className='header'>
-          <h1 className="header-title">Basement</h1>
+        <img className="logo-mobile" src="./B.svg" alt="" />
+        <img className="logo-desktop" src="./basement.logotype.png" alt="" />
+        <img className="hd-4k" src="./hd-4k.svg" alt="" />
          <BtnCart handleModal={handleModal}/>
          {showModal && <ModalCart handleModal={handleModal}/>}
      </header>
