@@ -3,7 +3,7 @@ const Banner = () => {
   return (
     <div className="banner">
       <img src="./header.svg" alt="banner" />
-      <div className="container-text">
+      <div className="banner-text">
           <p>A man cant have enough basement swag</p>
       </div>
     </div>
