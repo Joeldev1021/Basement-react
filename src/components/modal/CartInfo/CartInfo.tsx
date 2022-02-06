@@ -1,15 +1,20 @@
+import { ItemArticle } from "../../../type";
 import CartCount from "../cartCount/CartCount";
 import "./styles.css";
 
-const CartInfo = () => {
+interface Props {
+  item: ItemArticle;
+}
+
+const CartInfo = ({ item }:Props) => {
   return (
     <div className="cart-info">
       <div>
-        <h2>BLACK T-SHIRT</h2>
-        <p className="title-item">Unisex Basic Softstyle T-Shirt</p>
+        <h2>{item.name}</h2>
+        <p className="subtitle-item">Unisex Basic Softstyle T-Shirt</p>
       </div>
      <div className="cart-count">
-       <CartCount/>
+       <CartCount item={item}/>
        <div className="cart-details">
           <div className="cart-details-size">
             <p>size: </p>
@@ -20,7 +25,7 @@ const CartInfo = () => {
               <li>XL</li>
             </ul>
           </div>
-          <p className="cart-price">$12,50</p>
+          <p className="cart-price">${item.price}</p>
         </div>
       </div>
     </div>
