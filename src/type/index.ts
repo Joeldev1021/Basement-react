@@ -1,6 +1,7 @@
-export interface CartItem {
+export interface ItemArticle {
     id: number,
     name: string,
     price: number,
-    img: string
+    img: string,
+    count?: number
 };
