@@ -1,16 +1,23 @@
+import { useContext } from "react";
+import { CartContext } from "../../../context/CartContext";
+import { ItemArticle } from "../../../type";
 import "./styles.css";
 
-const CartCount = () => {
+interface Props {
+  item: ItemArticle;
+}
+
+const CartCount = ({ item }: Props) => {
+  const { incrementItem, decrementItem } = useContext(CartContext);
   return (
       <div className="cart-action">
           <p>Quantity: </p>
           <div>
-            <button className="count-btn">-</button>
-            <p>3</p>
-            <button className="count-btn">+</button>
+            <button onClick={() => decrementItem(item.id)} className="count-btn">-</button>
+            <p>{item.count}</p>
+            <button onClick={() => incrementItem(item.id)} className="count-btn">+</button>
           </div>
         </div>
-
   );
 };
 
