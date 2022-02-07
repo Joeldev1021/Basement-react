@@ -1,28 +1,26 @@
 /* eslint-disable no-unused-vars */
-import { useEffect, useReducer } from "react";
-import { ItemArticle } from "../type";
+import { useReducer } from "react";
+import { CartItem, InitialState, Product } from "../type";
 import { CartContext } from "./CartContext";
 import { data } from "../data";
 import { reducerCart } from "./cartReducer";
-import { useLocalStorage } from "../hooks/useLocalStorage";
 
 interface Props{
   children :JSX.Element|JSX.Element[]
 }
 
-const INITIAL_STATE = {
+const INITIAL_STATE:InitialState = {
   items: data,
   itemCart: []
 };
 
 const ProviderCart = ({ children }:Props) => {
-  const { value, setItem } = useLocalStorage();
   /// value the localStorage
-
   const [{ items, itemCart }, dispatch] = useReducer(reducerCart, INITIAL_STATE);
 
-  const addItemToCart = (item: ItemArticle) => {
-    dispatch({ type: "ADD_TO_CART", payload: { ...item, count: 1 } });
+  const addItemToCart = (item: Product) => {
+    const cart:CartItem = { ...item, count: 1 };
+    dispatch({ type: "ADD_TO_CART", payload: cart });
   };
 
   const incrementItem = (id: number) => {

@@ -4,7 +4,7 @@ const Banner = () => {
     <div className="banner">
       <img src="./header.svg" alt="banner" />
       <div className="banner-text">
-          <p>A man cant have enough basement swag</p>
+          <marquee>A man cant have enough basement swag</marquee>
       </div>
     </div>
   );

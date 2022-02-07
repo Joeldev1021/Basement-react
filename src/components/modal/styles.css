@@ -7,12 +7,7 @@
     padding-bottom: 10rem;
     top: 0;
     right: 0;
-}
-
-@media screen and (max-width: 768px) {
-    .modal-cart {
-        width: 100%;
-    }
+    z-index: 100;
 }
 
 .modal-btn {
@@ -39,7 +34,7 @@
     border: 1px solid white;
     width: 90%;
     margin: auto;
-    min-height: 19rem;
+    height: 19rem;
     display: flex;
 }
 
@@ -58,3 +53,21 @@
     text-align: center;
     font-size: 1.5rem;
 }
+
+@media screen and (max-width: 600px) {
+    .modal-cart {
+        width: 100%;
+    }
+    .cart-content {
+        height: 122px;
+      
+    }
+   .cart-img {
+       width: 8.5rem;
+        
+   } 
+    .cart-img img {
+         width: 100%;
+    }
+}
+

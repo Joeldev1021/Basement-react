@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import { CartContext } from "../../../context/CartContext";
-import { ItemArticle } from "../../../type";
+import { CartItem } from "../../../type";
 import "./styles.css";
 
 interface Props {
-  item: ItemArticle;
+  item: CartItem;
 }
 
 const CartCount = ({ item }: Props) => {

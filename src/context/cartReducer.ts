@@ -1,13 +1,13 @@
 /* eslint-disable no-unused-vars */
-import { ItemArticle } from "../type";
+import { Product, CartItem } from "../type";
 
 interface CartState {
-    items: ItemArticle[];
-    itemCart: ItemArticle[];
+    items: Product[];
+    itemCart: CartItem[];
 }
 
 type CartAction =
-| { type: "ADD_TO_CART", payload: ItemArticle }
+| { type: "ADD_TO_CART", payload: CartItem }
 | { type: "REMOVE_FROM_CART", payload: number }
 | {type: "INCREMENT_COUNT", payload: number}
 | {type: "DECREMENT_COUNT", payload: number}
@@ -18,7 +18,7 @@ export function reducerCart (state:CartState, action:CartAction) {
   switch (action.type) {
     case "ADD_TO_CART": return {
       ...state,
-      itemCart: state.itemCart.find(item => item.id === action.payload.id) ? state.itemCart.map(item => item.id === action.payload.id ? { ...item, count: item.count ? item.count + 1 : 1 } : item) : [...state.itemCart, { ...action.payload, count: 1 }]
+      itemCart: state.itemCart.find(item => item.id === action.payload.id) ? state.itemCart.map(item => item.id === action.payload.id ? { ...item, count: item.count + 1 } : item) : [...state.itemCart, action.payload]
     };
     case "REMOVE_FROM_CART":
       return {
@@ -28,12 +28,12 @@ export function reducerCart (state:CartState, action:CartAction) {
     case "INCREMENT_COUNT":
       return {
         ...state,
-        itemCart: state.itemCart.map(item => item.id === action.payload ? { ...item, count: item.count ? item.count++ : 1 } : item)
+        itemCart: state.itemCart.map(item => item.id === action.payload ? { ...item, count: item.count + 1 } : item)
       };
     case "DECREMENT_COUNT":
       return {
         ...state,
-        itemCart: state.itemCart.map(item => item.id === action.payload ? { ...item, count: item.count ? item.count-- : 1 } : item)
+        itemCart: state.itemCart.map(item => item.id === action.payload ? { ...item, count: item.count - 1 } : item)
       };
     case "CLEAR_CART":
       return {

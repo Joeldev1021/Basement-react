@@ -11,12 +11,12 @@ interface Props {
 
 const ModalCart = ({ handleModal }:Props) => {
   const { itemCart } = useContext(CartContext);
-
+  console.log(itemCart, "itemCart");
   return (
     <div className="modal-cart">
       <CartLogo />
       <button className="modal-btn" onClick={() => handleModal()}><img src="./close.png"/></button>
-      {itemCart.map(item => {
+      {itemCart?.map(item => {
         return (
           <div key={item.id}>
             <div className="cart-content" >
@@ -29,7 +29,7 @@ const ModalCart = ({ handleModal }:Props) => {
           </div>
         );
       })}
-      {itemCart.length === 0 && <p className="cart-empty">Your cart is empty</p>}
+      {itemCart?.length === 0 && <p className="cart-empty">Your cart is empty</p>}
     </div>
   );
 };
