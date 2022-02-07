@@ -1,9 +1,10 @@
 /* eslint-disable no-unused-vars */
-import { useReducer } from "react";
+import { useEffect, useReducer } from "react";
 import { ItemArticle } from "../type";
 import { CartContext } from "./CartContext";
 import { data } from "../data";
 import { reducerCart } from "./cartReducer";
+import { useLocalStorage } from "../hooks/useLocalStorage";
 
 interface Props{
   children :JSX.Element|JSX.Element[]
@@ -15,10 +16,13 @@ const INITIAL_STATE = {
 };
 
 const ProviderCart = ({ children }:Props) => {
+  const { value, setItem } = useLocalStorage();
+  /// value the localStorage
+
   const [{ items, itemCart }, dispatch] = useReducer(reducerCart, INITIAL_STATE);
 
   const addItemToCart = (item: ItemArticle) => {
-    dispatch({ type: "ADD_TO_CART", payload: item });
+    dispatch({ type: "ADD_TO_CART", payload: { ...item, count: 1 } });
   };
 
   const incrementItem = (id: number) => {
