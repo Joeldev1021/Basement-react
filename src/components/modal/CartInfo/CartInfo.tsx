@@ -1,9 +1,9 @@
-import { ItemArticle } from "../../../type";
+import { CartItem } from "../../../type";
 import CartCount from "../cartCount/CartCount";
 import "./styles.css";
 
 interface Props {
-  item: ItemArticle;
+  item: CartItem;
 }
 
 const CartInfo = ({ item }:Props) => {

@@ -1,12 +1,12 @@
 /* eslint-disable no-unused-vars */
 import { useContext } from "react";
 import { CartContext } from "../../../context/CartContext";
-import { ItemArticle } from "../../../type";
+import { CartItem } from "../../../type";
 import "./styles.css";
 
 const CartFooter = () => {
   const { itemCart } = useContext(CartContext);
-  const reduce = (accumulator: number, currentValue: ItemArticle) => accumulator + (currentValue.count * currentValue.price);
+  const reduce = (accumulator: number, currentValue: CartItem) => accumulator + (currentValue.count * currentValue.price);
 
   const result = itemCart.reduce(reduce, 0);
 
