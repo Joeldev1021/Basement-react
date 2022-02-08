@@ -11,13 +11,13 @@
     border-bottom: 2px solid white;
    
 }
-.banner-text marquee {
+.banner-text div {
     margin:0;
     font-size: 4.3rem;
 }
 
 @media screen and (max-width: 500px) {
-    .banner-text marquee {
+    .banner-text div{
         font-size: 2rem;
     }
 }
