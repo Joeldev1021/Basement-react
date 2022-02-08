@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { ItemArticle } from "../type";
+import { CartItem } from "../type";
 
 interface Props {
-    itemCart?: ItemArticle[];
+    itemCart?: CartItem[];
 }
 export function useLocalStorage () {
   const [value, setValue] = useState(() => {

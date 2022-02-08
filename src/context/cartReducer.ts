@@ -14,7 +14,6 @@ type CartAction =
 | { type: "CLEAR_CART" };
 
 export function reducerCart (state:CartState, action:CartAction) {
-  console.log(action);
   switch (action.type) {
     case "ADD_TO_CART": return {
       ...state,
